@@ -6,6 +6,7 @@ import { MainPage } from './pages/main-page'
 import { OrigamiAPI } from './api/origami/origami'
 import { Routes, Route, BrowserRouter } from 'react-router-dom'
 import { OrigamiPage } from './pages/origami-page'
+import { StagesPage } from './pages/stages-page'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route path='/' element={<MainPage />} />
         <Route path=':id' element={<OrigamiPage />} />
+        <Route path=':id/:stage' element={<StagesPage />} />
       </Routes>
     </BrowserRouter>
   )

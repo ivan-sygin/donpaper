@@ -3,17 +3,20 @@ import { Navigate, useNavigate, useParams } from 'react-router-dom'
 import { OrigamiAPI } from '../api/origami/origami'
 import Box from '@mui/material/Box'
 
-export function OrigamiPage() {
-  const { id } = useParams()
+export function StagesPage() {
+  const { id, stage } = useParams()
   const navigate = useNavigate()
   const [data, setData] = useState()
+  console.log(id, stage)
   useEffect(() => {
     OrigamiAPI.getOrigamieById(id).then((res) => {
       setData(res)
     })
   }, [])
+
   if (!data) return <>Loading...</>
-  console.log(data)
+  var finished = false
+  if (stage == data.count_steps + 1) finished = true
   return (
     <Box
       display={'flex'}
@@ -42,28 +45,23 @@ export function OrigamiPage() {
             Инженерное оригами
           </Box>
         </Box>
+
         <Box
           display={'flex'}
           flexDirection={'column'}
           alignItems={'center'}
           justifyContent={'center'}
         >
-          <Box
-            width={256}
-            height={256}
-            sx={{
-              backgroundImage: 'url(' + data.mainPhoto + ');',
-              backgroundSize: 'cover'
-            }}
-          ></Box>
-          <Box fontSize={28}>{data.name}</Box>
-          <Box fontSize={28}>{'★'.repeat(data.difficulty)}</Box>
-          <Box fontSize={28} textAlign={'center'}>
-            {'В данной модели всего ' + data.count_steps + ' шагов. '}
-          </Box>
+          <InsideComponent
+            stage={stage}
+            data={data}
+            finished={finished}
+          ></InsideComponent>
           <div
             onClick={() => {
-              navigate('1')
+              if (stage <= data.count_steps)
+                navigate('/' + id + '/' + (Number(stage) + 1))
+              else navigate('/')
             }}
           >
             <Box
@@ -96,4 +94,40 @@ export function OrigamiPage() {
       </Box>
     </Box>
   )
+}
+
+function InsideComponent({ stage, data, finished = false }) {
+  if (!finished)
+    return (
+      <>
+        <Box
+          width={256}
+          height={256}
+          sx={{
+            backgroundImage: 'url(' + data.mainPhoto + ');',
+            backgroundSize: 'cover'
+          }}
+        ></Box>
+        <Box fontSize={28} textAlign={'center'}>
+          {data.desc_process[stage - 1]}
+        </Box>
+      </>
+    )
+  else {
+    return (
+      <>
+        <Box
+          width={256}
+          height={256}
+          sx={{
+            backgroundImage: 'url(' + data.mainPhoto + ');',
+            backgroundSize: 'cover'
+          }}
+        ></Box>
+        <Box fontSize={28} textAlign={'center'}>
+          {'Вы закончили! Поздравляю'}
+        </Box>
+      </>
+    )
+  }
 }

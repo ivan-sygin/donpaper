@@ -16,7 +16,7 @@ export class OrigamiAPI {
 
   static getOrigamieById = async (id) => {
     //var res = await API.getMethod('origamies/getAllOrigamies')
-    var res = await API.getMethod('examples/getOrigamie.json')
+    var res = await API.getMethod('/examples/getOrigamie.json')
 
     return new Origami(res['response'][0])
   }
