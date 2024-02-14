@@ -55,54 +55,80 @@ export function MainPage() {
             flexDirection={'row'}
             justifyContent={'center'}
             alignItems={'center'}
+            sx={{ cursor: 'pointer', userSelect: 'none' }}
           >
             <div
+              style={{ cursor: 'pointer' }}
               onClick={() => {
                 if (filterStars != 1) setFilterStars(1)
                 else setFilterStars(0)
               }}
             >
-              <Box fontSize={30} color={star_colors[0]}>
+              <Box
+                fontSize={30}
+                color={star_colors[0]}
+                sx={{ cursor: 'pointer' }}
+              >
                 ★
               </Box>
             </div>
             <div
+              style={{ cursor: 'pointer' }}
               onClick={() => {
                 if (filterStars != 2) setFilterStars(2)
                 else setFilterStars(0)
               }}
             >
-              <Box fontSize={30} color={star_colors[1]}>
+              <Box
+                fontSize={30}
+                color={star_colors[1]}
+                sx={{ cursor: 'pointer' }}
+              >
                 ★
               </Box>
             </div>
             <div
+              style={{ cursor: 'pointer' }}
               onClick={() => {
                 if (filterStars != 3) setFilterStars(3)
                 else setFilterStars(0)
               }}
             >
-              <Box fontSize={30} color={star_colors[2]}>
+              <Box
+                fontSize={30}
+                color={star_colors[2]}
+                sx={{ cursor: 'pointer' }}
+              >
                 ★
               </Box>
             </div>
             <div
+              style={{ cursor: 'pointer' }}
               onClick={() => {
                 if (filterStars != 4) setFilterStars(4)
                 else setFilterStars(0)
               }}
             >
-              <Box fontSize={30} color={star_colors[3]}>
+              <Box
+                fontSize={30}
+                color={star_colors[3]}
+                sx={{ cursor: 'pointer' }}
+              >
                 ★
               </Box>
             </div>
             <div
+              style={{ cursor: 'pointer', userSelect: 'none' }}
               onClick={() => {
                 if (filterStars != 5) setFilterStars(5)
                 else setFilterStars(0)
               }}
             >
-              <Box fontSize={30} color={star_colors[4]}>
+              <Box
+                fontSize={30}
+                color={star_colors[4]}
+                sx={{ cursor: 'pointer', userSelect: 'none' }}
+              >
                 ★
               </Box>
             </div>
@@ -170,7 +196,11 @@ export function MainPage() {
                 else setFilterStars(0)
               }}
             >
-              <Box fontSize={30} color={star_colors[0]}>
+              <Box
+                fontSize={30}
+                color={star_colors[0]}
+                sx={{ cursor: 'pointer', userSelect: 'none' }}
+              >
                 ★
               </Box>
             </div>
@@ -180,7 +210,11 @@ export function MainPage() {
                 else setFilterStars(0)
               }}
             >
-              <Box fontSize={30} color={star_colors[1]}>
+              <Box
+                fontSize={30}
+                color={star_colors[1]}
+                sx={{ cursor: 'pointer', userSelect: 'none' }}
+              >
                 ★
               </Box>
             </div>
@@ -190,7 +224,11 @@ export function MainPage() {
                 else setFilterStars(0)
               }}
             >
-              <Box fontSize={30} color={star_colors[2]}>
+              <Box
+                fontSize={30}
+                color={star_colors[2]}
+                sx={{ cursor: 'pointer', userSelect: 'none' }}
+              >
                 ★
               </Box>
             </div>
@@ -200,7 +238,11 @@ export function MainPage() {
                 else setFilterStars(0)
               }}
             >
-              <Box fontSize={30} color={star_colors[3]}>
+              <Box
+                fontSize={30}
+                color={star_colors[3]}
+                sx={{ cursor: 'pointer', userSelect: 'none' }}
+              >
                 ★
               </Box>
             </div>
@@ -210,7 +252,11 @@ export function MainPage() {
                 else setFilterStars(0)
               }}
             >
-              <Box fontSize={30} color={star_colors[4]}>
+              <Box
+                fontSize={30}
+                color={star_colors[4]}
+                sx={{ cursor: 'pointer', userSelect: 'none' }}
+              >
                 ★
               </Box>
             </div>
