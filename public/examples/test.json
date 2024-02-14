@@ -1,0 +1,29 @@
+{
+  "name": "Лебедь",
+  "main_photo": "https://enotgpt-fileserver.serveo.net/photos/f8afbb9d5f211dd918148971718cd57963ed1a61.png",
+  "difficulty": 3,
+  "time_to_solve": "10 мин.",
+  "photo_process": [
+    "https://enotgpt-fileserver.serveo.net/photos/1cfe1bc86bc44526f71702be11c2c39161c3f9d9.png",
+    "https://enotgpt-fileserver.serveo.net/photos/ed63e4722aa476b223b77e004dd27d9124ca6a92.png",
+    "https://enotgpt-fileserver.serveo.net/photos/a26b917bc2a95d0eed47824536e131aab8ba2372.png",
+    "https://enotgpt-fileserver.serveo.net/photos/b4d2c0408fa9434b48e4ee8be1f5b6c2f1e5ed6a.png",
+    "https://enotgpt-fileserver.serveo.net/photos/bd0f7e1e64e4296371ac8dfe16715a6fd50c6852.png",
+    "https://enotgpt-fileserver.serveo.net/photos/0cd5a18228b70e1162be9e5ba4e0005e71d6925c.png",
+    "https://enotgpt-fileserver.serveo.net/photos/15235a5af2a3ed5f69290b2667bea7635457ac83.png",
+    "https://enotgpt-fileserver.serveo.net/photos/a218bdf90827f2815b34df64c74abd252a9a4443.png",
+    "https://enotgpt-fileserver.serveo.net/photos/2074358c59de0c2ba5ef59aa3675f3215f2c35d7.png"
+  ],
+  "desc_process": [
+    "Сверните так",
+    "Потом вот так",
+    "Тут вот так",
+    "Здесь переверни",
+    "Красиво согни",
+    "Выверни листик",
+    "Согни хорошо",
+    "Сложи листик",
+    "Почти готово"
+  ],
+  "author": "ДонНТУ"
+}

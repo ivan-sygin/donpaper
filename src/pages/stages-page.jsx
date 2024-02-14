@@ -73,6 +73,7 @@ export function StagesPage() {
               color={'white'}
               borderRadius={'10px'}
               bgcolor={'#F4A261'}
+              sx={{ cursor: 'pointer', userSelect: 'none' }}
             >
               Продолжить
             </Box>
@@ -104,7 +105,7 @@ function InsideComponent({ stage, data, finished = false }) {
           width={256}
           height={256}
           sx={{
-            backgroundImage: 'url(' + data.mainPhoto + ');',
+            backgroundImage: 'url(' + data.photo_process[stage - 1] + ');',
             backgroundSize: 'cover'
           }}
         ></Box>

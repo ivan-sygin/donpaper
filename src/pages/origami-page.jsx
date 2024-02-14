@@ -125,6 +125,7 @@ export function OrigamiPage() {
               color={'white'}
               borderRadius={'10px'}
               bgcolor={'#F4A261'}
+              sx={{ cursor: 'pointer', userSelect: 'none' }}
             >
               Продолжить
             </Box>

@@ -12,7 +12,8 @@ export class Origami {
    * @param {json} json - The date
    */
   constructor(json) {
-    this.id = json['id_origami']
+    console.log(json)
+    this.id = json['id']
     this.name = json['name']
     this.difficulty = json['difficulty']
     this.timeToSolve = json['time_to_solve']
