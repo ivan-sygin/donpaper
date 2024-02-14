@@ -12,7 +12,57 @@ export function OrigamiPage() {
       setData(res)
     })
   }, [])
-  if (!data) return <>Loading...</>
+  if (!data)
+    return (
+      <Box
+        display={'flex'}
+        flexDirection={'column'}
+        alignItems={'center'}
+        minHeight={'100vh'}
+      >
+        <Box width={'100%'} maxWidth={1400}>
+          <Box
+            width={'100%'}
+            minHeight={100}
+            bgcolor={'#264653'}
+            display={'flex'}
+            justifyContent={'center'}
+            alignItems={'center'}
+            marginBottom={1}
+            borderRadius={'0 0 10px 10px'}
+          >
+            <Box
+              width={'90%'}
+              fontSize={42}
+              fontWeight={1000}
+              color={'white'}
+              textAlign={'center'}
+            >
+              Инженерное оригами
+            </Box>
+          </Box>
+          <Box
+            display={'flex'}
+            flexDirection={'column'}
+            alignItems={'center'}
+            justifyContent={'center'}
+          ></Box>
+        </Box>
+        <Box display={'flex'} flexGrow={1}></Box>
+        <Box
+          marginTop={5}
+          minHeight={50}
+          display={'flex'}
+          justifyContent={'center'}
+          alignItems={'center'}
+          bgcolor={'black'}
+          color={'white'}
+          width={'100%'}
+        >
+          <Box>© ДонНТУ 2024</Box>
+        </Box>
+      </Box>
+    )
   console.log(data)
   return (
     <Box

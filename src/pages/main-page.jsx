@@ -22,7 +22,113 @@ export function MainPage() {
   }, [])
 
   if (listOrigamies == []) {
-    return <>Загрузка</>
+    return (
+      <Box
+        display={'flex'}
+        flexDirection={'column'}
+        alignItems={'center'}
+        minHeight={'100vh'}
+      >
+        <Box width={'100%'} maxWidth={1400}>
+          <Box
+            width={'100%'}
+            minHeight={100}
+            bgcolor={'#264653'}
+            display={'flex'}
+            justifyContent={'center'}
+            alignItems={'center'}
+            marginBottom={1}
+            borderRadius={'0 0 10px 10px'}
+          >
+            <Box
+              width={'90%'}
+              fontSize={42}
+              fontWeight={1000}
+              color={'white'}
+              textAlign={'center'}
+            >
+              Инженерное оригами
+            </Box>
+          </Box>
+          <Box
+            display={'flex'}
+            flexDirection={'row'}
+            justifyContent={'center'}
+            alignItems={'center'}
+          >
+            <div
+              onClick={() => {
+                if (filterStars != 1) setFilterStars(1)
+                else setFilterStars(0)
+              }}
+            >
+              <Box fontSize={30} color={star_colors[0]}>
+                ★
+              </Box>
+            </div>
+            <div
+              onClick={() => {
+                if (filterStars != 2) setFilterStars(2)
+                else setFilterStars(0)
+              }}
+            >
+              <Box fontSize={30} color={star_colors[1]}>
+                ★
+              </Box>
+            </div>
+            <div
+              onClick={() => {
+                if (filterStars != 3) setFilterStars(3)
+                else setFilterStars(0)
+              }}
+            >
+              <Box fontSize={30} color={star_colors[2]}>
+                ★
+              </Box>
+            </div>
+            <div
+              onClick={() => {
+                if (filterStars != 4) setFilterStars(4)
+                else setFilterStars(0)
+              }}
+            >
+              <Box fontSize={30} color={star_colors[3]}>
+                ★
+              </Box>
+            </div>
+            <div
+              onClick={() => {
+                if (filterStars != 5) setFilterStars(5)
+                else setFilterStars(0)
+              }}
+            >
+              <Box fontSize={30} color={star_colors[4]}>
+                ★
+              </Box>
+            </div>
+          </Box>
+          <Box
+            display={'flex'}
+            gap={4}
+            flexWrap={'wrap'}
+            justifyContent={'center'}
+          ></Box>
+        </Box>
+        <Box display={'flex'} flexGrow={1}></Box>
+        <Box
+          marginTop={5}
+          minHeight={50}
+          display={'flex'}
+          justifyContent={'center'}
+          alignItems={'center'}
+          bgcolor={'black'}
+          color={'white'}
+          width={'100%'}
+        >
+          <Box>© ДонНТУ 2024</Box>
+        </Box>
+      </Box>
+    )
   } else {
     return (
       <Box
