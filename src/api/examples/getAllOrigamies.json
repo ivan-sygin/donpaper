@@ -1,0 +1,19 @@
+{
+  "status": true,
+  "response": [
+    {
+      "id_origami": 19,
+      "name": "Фуфел",
+      "main_photo": "https://photo",
+      "difficulty": 3,
+      "time_to_solve": "10 мин."
+    },
+    {
+      "id_origami": 20,
+      "name": "Орёл",
+      "main_photo": "https://photo",
+      "difficulty": 4,
+      "time_to_solve": "15 мин."
+    }
+  ]
+}

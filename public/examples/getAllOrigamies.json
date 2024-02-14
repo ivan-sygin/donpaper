@@ -1,0 +1,19 @@
+{
+  "status": true,
+  "response": [
+    {
+      "id_origami": 19,
+      "name": "Коробка",
+      "main_photo": "https://enotgpt-fileserver.serveo.net/photos/8223a9bd2c576bc1950a91cead9bb125f7bb6da9.png",
+      "difficulty": 3,
+      "time_to_solve": "10 мин."
+    },
+    {
+      "id_origami": 20,
+      "name": "Птица",
+      "main_photo": "https://enotgpt-fileserver.serveo.net/photos/95334ae301c3d43169dd75e8e32b2e94d649d506.png",
+      "difficulty": 4,
+      "time_to_solve": "15 мин."
+    }
+  ]
+}
