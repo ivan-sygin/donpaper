@@ -1,17 +1,14 @@
 import { React, useEffect, useState } from 'react'
 import Box from '@mui/material/Box'
 import { OrigamiAPI } from '../api/origami/origami'
-import { origamiShowComponent } from '../components/origami-show'
+import { OrigamiShowComponent } from '../components/origami-show'
 export function MainPage() {
   const [listOrigamies, setListOrigamies] = useState([])
   var tmp = []
   useEffect(() => {
     OrigamiAPI.getListOrigamies().then((res) => {
-      var tmp = []
-      res.forEach((element) => {
-        tmp.push(origamiShowComponent(element))
-      })
-      setListOrigamies(tmp)
+      console.log(res)
+      setListOrigamies(res)
     })
   }, [])
 
@@ -19,8 +16,13 @@ export function MainPage() {
     return <>Загрузка</>
   } else {
     return (
-      <Box display={'flex'} flexDirection={'column'} minHeight={'100vh'}>
-        <Box width={'100%'}>
+      <Box
+        display={'flex'}
+        flexDirection={'column'}
+        alignItems={'center'}
+        minHeight={'100vh'}
+      >
+        <Box width={'100%'} maxWidth={1400}>
           <Box
             width={'100%'}
             minHeight={100}
@@ -29,10 +31,11 @@ export function MainPage() {
             justifyContent={'center'}
             alignItems={'center'}
             marginBottom={1}
+            borderRadius={'0 0 10px 10px'}
           >
             <Box
               width={'90%'}
-              fontSize={48}
+              fontSize={42}
               fontWeight={1000}
               color={'white'}
               textAlign={'center'}
@@ -46,7 +49,9 @@ export function MainPage() {
             flexWrap={'wrap'}
             justifyContent={'center'}
           >
-            {listOrigamies}
+            {listOrigamies.map((element) => (
+              <OrigamiShowComponent origami={element} />
+            ))}
           </Box>
         </Box>
         <Box display={'flex'} flexGrow={1}></Box>
@@ -58,6 +63,7 @@ export function MainPage() {
           alignItems={'center'}
           bgcolor={'black'}
           color={'white'}
+          width={'100%'}
         >
           <Box>© ДонНТУ 2024</Box>
         </Box>

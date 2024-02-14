@@ -1,0 +1,16 @@
+{
+  "status": true,
+  "response": [
+    {
+      "id_origami": 19,
+      "name": "Коробка",
+      "main_photo": "https://enotgpt-fileserver.serveo.net/photos/8223a9bd2c576bc1950a91cead9bb125f7bb6da9.png",
+      "difficulty": 3,
+      "time_to_solve": "10 мин.",
+      "count_steps": 3,
+      "photo_process": ["фото", "фото", "фото"],
+      "desc_process": ["Сложите", "Разложите", "Ублажите"],
+      "author": "ДонНТУ"
+    }
+  ]
+}

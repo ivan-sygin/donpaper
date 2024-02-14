@@ -1,12 +1,25 @@
+import { useNavigate } from 'react-router-dom'
+import React from 'react'
 import Box from '@mui/material/Box'
-import { Button } from '@mui/material'
-import { OrigamiShow } from '../api/classes/origamiShow'
+
+import { Origami } from '../api/classes/origami'
+
 /**
- * @param {OrigamiShow} origami - The date
+ * @param {Origami} origami - The date
  */
-export function origamiShowComponent(origami) {
-  let stars = '★'.repeat(origami.difficulty)
-  let colorStars = { 1: 'green', 2: 'blue', 3: 'red', 4: 'purple', 5: 'black' }
+export const OrigamiShowComponent = ({ origami }) => {
+  const navigate = useNavigate()
+  const stars = '★'.repeat(origami.difficulty)
+  const redirect = (url) => {
+    navigate(url)
+  }
+  const colorStars = {
+    1: 'green',
+    2: 'blue',
+    3: 'red',
+    4: 'purple',
+    5: 'black'
+  }
   return (
     <div key={origami.id}>
       <Box
@@ -44,18 +57,24 @@ export function origamiShowComponent(origami) {
             </Box>
           </Box>
         </Box>
-        <Box paddingY={1}>
-          <Box
-            bgcolor={'#F4A261'}
-            borderRadius={10}
-            paddingX={2}
-            paddingY={1}
-            color={'white'}
-            sx={{ cursor: 'pointer' }}
-          >
-            Начать сборку
+        <div
+          onClick={() => {
+            redirect('/' + origami.id.toString())
+          }}
+        >
+          <Box paddingY={1}>
+            <Box
+              bgcolor={'#F4A261'}
+              borderRadius={10}
+              paddingX={2}
+              paddingY={1}
+              color={'white'}
+              sx={{ cursor: 'pointer' }}
+            >
+              Начать сборку
+            </Box>
           </Box>
-        </Box>
+        </div>
       </Box>
     </div>
   )
